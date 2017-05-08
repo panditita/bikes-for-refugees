@@ -30,13 +30,43 @@ body {
 	color: #292b2c;
 	font-weight: 600;
 	text-transform: uppercase;
+	margin: 10px;
+	padding: 5px;
+}
+
+.nav-item a:hover,.nav-item a:focus  {
+	border-color: #ce5f31;
+	border-style: solid;
+}
+.nav-link a:hover a:focus {
+	border-color: #33cc66;
+	border-style: solid;
+}
+.navbar-nav .nav-item.active a:hover, .nav-item.active a:focus  {
+	border-color: #33cc66;
+	border-style: solid;
 }
 
 /* Buttons */
 .btn {
 	border-radius: 0.15em;
+	border-color: #ce5f31;
 }
-
+.btn-primary{
+	background-color: #ce5f31;
+	}
+.btn-primary:hover,
+.btn:focus {
+    background:#33cc66;
+	border-color: #33cc66;
+}
+.btn-secondary{
+	color: #ce5f31;
+}
+.btn-secondary:hover,
+.btn:focus {
+	color: #33cc66;
+}
 /* Alert */
 .alert {
 	position: relative;
@@ -65,7 +95,41 @@ body {
 /* Jumbotron */
 .jumbotron {
 	border-radius: 0;
+	background: url(../images/header-bike.jpg);
+	color: white;
 }
+.jumbotron .display-3 {
+	font-size: 3rem;
+}
+
+.container-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.item {
+	width: 100px;
+	height: 100px;
+	float: left;
+	border: solid #a74b24;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #ce5f31;
+	color: white;
+}
+.inner {
+	text-align: center;
+}
+.container-buttons .item:hover, .item:focus{
+	background:#33cc66;
+	border-color: #33cc66;
+}
+
 
 /* Headings */
 .heading-underline {
@@ -119,9 +183,62 @@ body {
 	margin-bottom: 0;
 }
 
+/*SideBar*/
+sidebar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.articles {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+}	
+.article.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}	
+
+.article-body{
+	flex:2;
+	align-self: center;
+}
+
+.article.row a{
+	flex: 1;
+	align-self: center;
+
+}
+
+/* Media Query */
+
+@media screen and (min-width: 480px) {
+
+	.jumbotron .display-3 {
+		font-size: 4.5rem;
+	}
+}
+@media screen and (max-width: 480px) {
+
+	.article.row{
+		display: flex;
+		flex-direction: column;
+	}
+}
 @media screen and (min-width: 992px) {
 
 	.navbar-brand > img {
 	   max-height: 80px;
 	}
 }
+
+
+
+
+
